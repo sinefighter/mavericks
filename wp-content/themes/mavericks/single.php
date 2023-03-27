@@ -29,28 +29,30 @@
 		</div>
 	</section>
 
-	<?php
-		$posts_per_page = 2;
-		$random_posts = new  WP_Query([
-			'post_type' => 'post',
-			'orderby' => 'rand',
-			'posts_per_page' => $posts_per_page,
-			'post__not_in' => [get_the_ID()],
-		]);
-	?>
-	<?php if($random_posts->have_posts()) { ?>
-	<section class="section blog-latest">
-		<div class="wrap">
-			<h2 class="t-center">
-				ОСТАННІ НОВИНИ
-			</h2>
-			<div class="row news-amount">
-				<?php while($random_posts->have_posts()) { $random_posts->the_post(); ?>
-					<?php get_template_part( 'parts/block', 'post' ); ?>
-				<?php } wp_reset_postdata(); ?>
+	<?php if(get_post_type() != 'events') { ?>
+		<?php
+			$posts_per_page = 2;
+			$random_posts = new  WP_Query([
+				'post_type' => 'post',
+				'orderby' => 'rand',
+				'posts_per_page' => $posts_per_page,
+				'post__not_in' => [get_the_ID()],
+			]);
+		?>
+		<?php if($random_posts->have_posts()) { ?>
+		<section class="section blog-latest">
+			<div class="wrap">
+				<h2 class="t-center">
+					ОСТАННІ НОВИНИ
+				</h2>
+				<div class="row news-amount">
+					<?php while($random_posts->have_posts()) { $random_posts->the_post(); ?>
+						<?php get_template_part( 'parts/block', 'post' ); ?>
+					<?php } wp_reset_postdata(); ?>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+		<?php } ?>
 	<?php } ?>
 <?php } ?>
 </main>
