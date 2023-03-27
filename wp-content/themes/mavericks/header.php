@@ -16,7 +16,7 @@
 	</div>
 
 	<header class="header" id="header">
-		<a href="/" class="logo">
+		<a href="<?php echo home_url(); ?>" class="logo">
 			<img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo.png" alt="">
 		</a>
 		<button class="btn-light-tr btn-menu" id="btn-menu">

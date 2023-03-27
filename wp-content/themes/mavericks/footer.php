@@ -1,5 +1,5 @@
 <footer class="footer" id="footer">
-	<a href="#" class="logo">
+	<a href="<?php echo home_url(); ?>" class="logo">
 		<img src="<?php echo get_template_directory_uri(); ?>/dist/img/logo-primary.png" alt="">
 	</a>
 	<nav class="footer-nav">

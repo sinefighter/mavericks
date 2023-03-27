@@ -1,2 +1,3 @@
 # Ignore the node_modules directory in the Mavericks theme
 wp-content/themes/mavericks/node_modules/
+wp-content/backups-dup-lite/
