@@ -8,7 +8,7 @@ $(document).ready(function() {
 		const currentShow = parseInt($(this).attr('data-current'));
 
 		$.ajax({
-			url: '/wp-admin/admin-ajax.php',
+			url: frontendAjax.ajaxurl,
 			type: 'post',
 			data: {
 				action:"ajax_more_events",
@@ -73,7 +73,7 @@ $(document).ready(function() {
 
 		if(flag) { // если валидация продена - шлем запрос
 			$.ajax({
-				url: '/wp-admin/admin-ajax.php',
+				url: frontendAjax.ajaxurl,
 				type: 'post',
 				data: {
 					action:"insert_order",
@@ -117,7 +117,7 @@ $(document).ready(function() {
 		const country = $(this).data('country'); // берем значение из кнопки на которую нажали
 
 		$.ajax({
-			url: '/wp-admin/admin-ajax.php',
+			url: frontendAjax.ajaxurl,
 			type: 'post',
 			data: {
 				action:"add_country_cookie",

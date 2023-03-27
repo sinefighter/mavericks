@@ -47,6 +47,9 @@ function mavericks_scripts() {
 
 	wp_enqueue_script( 'mavericks-scripts', get_template_directory_uri() . '/dist/js/scripts.min.js', array(), false, true );
 
+	wp_localize_script( 'mavericks-scripts', 'frontendAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
+
+
 }
 add_action( 'wp_enqueue_scripts', 'mavericks_scripts' );
 
@@ -317,7 +320,7 @@ function add_country_cookie() {
 		$url = get_permalink(153); //страница для редиректа
 		echo $url;
 	}else{
-		display_menu($country);
+		display_menu($country); // если не ру, то вызываем функцию, куда передаем ид страны
 	}
 
 	exit;
@@ -325,6 +328,7 @@ function add_country_cookie() {
 add_action('wp_ajax_nopriv_add_country_cookie', 'add_country_cookie'); 
 add_action('wp_ajax_add_country_cookie', 'add_country_cookie');
 
+// динамический вывод меню в зависимости от страны
 function display_menu($country = 'ua'){
     if ( isset($_COOKIE['country']) && $_COOKIE['country'] != 'ru') {
 		$country_menu = $_COOKIE['country'];
@@ -332,7 +336,7 @@ function display_menu($country = 'ua'){
 		$country_menu = $country;
 	}
 
-	if (!has_nav_menu('menu-' . $country_menu)) {
+	if (!has_nav_menu('menu-' . $country_menu)) { //если вдруг в куках значение, для которого нет меню, то делаем по дефолту юа меню
 		$country_menu = 'ua';
 	}
 
@@ -386,6 +390,3 @@ function add_custom_email_fields( $wp_customize ) {
     ) );
 }
 add_action( 'customize_register', 'add_custom_email_fields' );
-
-
-// echo get_theme_mod( 'mavericks_email_pl' );
