@@ -1,0 +1,73 @@
+********************************************************************************
+DUPLICATOR-LITE PACKAGE-LOG: 27.03.2023 13:49
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.5.3.1
+WORDPRESS:	6.1.1
+PHP INFO:	8.0.18 | SAPI: apache2handler
+SERVER:		Apache 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 4294967296 (1536M default) 
+MEMORY STACK: 38MB
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   MYSQLDUMP
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Is Supported
+SQL CREATED: 20230327_mavericks_890b7d7ee65035e08727_20230327134823_database.sql
+SQL FILE SIZE: 398.63KB (408198)
+SQL FILE TIME: 2023-03-27 13:49:09
+SQL RUNTIME: 3.66 sec.
+
+********************************************************************************
+ARCHIVE (ZIP):
+********************************************************************************
+ARCHIVE DIR:  C:/OpenServer/domains/mavericks
+ARCHIVE FILE: 20230327_mavericks_890b7d7ee65035e08727_20230327134823_archive.zip
+FILTERS: *OFF*
+DIRS:
+	not set
+FILES:
+	not set
+EXTS:  not set
+----------------------------------------
+COMPRESSING
+SIZE:	138.61MB
+STATS:	Dirs 593 | Files 4,277
+SQL ADDED: 20230327_mavericks_890b7d7ee65035e08727_20230327134823_database.sql
+ZipArchive Object
+(
+    [lastId] => 4869
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 4870
+    [filename] => C:\OpenServer\domains\mavericks\wp-content\backups-dup-lite\tmp\20230327_mavericks_890b7d7ee65035e08727_20230327134823_archive.zip
+    [comment] => 
+)
+
+FILE ADDED TO ZIP: 4869
+COMPRESSION RESULT: '1'
+COMPRESSED SIZE: 75.32MB
+ARCHIVE RUNTIME: 53.54 sec.
+MEMORY STACK: 40MB
+building installer
+ARCHIVE CONSISTENCY TEST: PASS
+
+********************************************************************************
+INTEGRITY CHECKS:
+********************************************************************************
+SQL FILE: 398.63KB
+INSTALLER FILE: 73.35KB
+ARCHIVE FILE: 77.15MB 
+EXPECTED FILE/DIRECTORY COUNT: 4,870
+ACTUAL FILE/DIRECTORY COUNT: 4,869
+ARCHIVE CONSISTENCY TEST: Pass
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 58.54 sec.
+PEAK PHP MEMORY USED: 42MB
+DONE PROCESSING => 20230327_mavericks 27.03.2023 13:50
+
